@@ -9,16 +9,20 @@
     "author": "Nadezhda Hristova",
     "license": "ISC",
     "dependencies": {
-        "gulp-clean": "^0.3.2",
         "jquery": "^3.2.1",
-        "systemjs": "^0.20.19"
+        "navigo": "^5.3.3"
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-preset-env": "^1.6.1",
         "gulp": "^3.9.1",
         "gulp-babel": "^7.0.0",
+        "gulp-clean": "^0.3.2",
         "gulp-sync": "^0.1.4",
-        "node-sass": "^4.5.3"
+        "gulp-webserver": "^0.9.1",
+        "handlebars": "^4.0.11",
+        "node-sass": "^4.5.3",
+        "systemjs": "^0.20.19",
+        "systemjs-plugin-babel": "0.0.25"
     }
 }
