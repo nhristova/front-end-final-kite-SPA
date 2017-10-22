@@ -9,6 +9,7 @@ const initRoutes = () => {
 
     router
         .on(() => homeController.load())
+        .on('home', () => homeController.load())
         .on('about', () => aboutController.load())
         .resolve();
     // router

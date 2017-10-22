@@ -19,14 +19,16 @@
     <header>
         <div class="nh-content">
             <div class="nh-row">
-                <img src="/src/static/images/kite-logo.svg" alt="logo" class="nh-logo">
+                <a href="/">
+                    <img src="/src/static/images/kite-logo.svg" alt="logo" class="nh-logo">
+                </a>
                 <span class="nh-slogan nh-shadow-dark">Fly Higher</span>
                 <nav class="nh-nav nh-head-nav nh-float-right nh-shadow-light">
                     <ul>
-                        <li>Home</li>
+                        <li><a href="/#home">Home</a></li>
                         <li>Themes</li>
                         <li>Features</li>
-                        <li><a href="#/about">About</a></li>
+                        <li><a href="/#about">About</a></li>
                         <li>Blog</li>
                         <li>Support</li>
                         <li>Affiliates</li>
@@ -36,88 +38,28 @@
                     </ul>
                 </nav>
             </div>
-            <section class="nh-head-care">
+            <section id="title-content" class="nh-head-short">
                 <div class="nh-head-care-text nh-shadow-dark">
-                    <h2>Flying Kites Has Never Been Easier</h2>
-                    <p>Join today and gift your family and loved ones with an unique experience</p>
+                    <h2 id="page-name">...</h2>
+                    <p id="page-info">Loading ... O.o</p>
                 </div>
+            </section>
+
+            <section id="action-buttons" class="nh-action-btns" style="display:none">
+                <button class="nh-btn-blue btn-info">View The Demo</button>
+                <button class="nh-btn-blue  btn-info">Sign Up Today!</button>
             </section>
         </div>
     </header>
 
     <!-- MAIN -->
-    <main>
-        <div class="nh-content" id="main-content" style="border: 1px solid red ">
-            <section class="nh-action-btns">
-                <button class="nh-btn-blue">View The Demo</button>
-                <button class="nh-btn-blue">Sign Up Today!</button>
-            </section>
-            <section class="row nh-blurbs nh-shadow-light nh-row">
-                <div class="col-md-4">
-                    <h3>What We Offer</h3>
-                    <img src="" alt="offer" class="nh-img-sq">
-                    <p>Lorem ipsum dolor sit amet, nec persecuti posidonium ut. Clita sanctus qui ex. In pri putent voluptaria, harum nemore vivendum ea quo. Eu nec homero graeco mandamus, ius cu dicit vituperata.
-                    </p>
-                    <div class="nh-btn-container">
-                        <button class="nh-btn-white">Read More</button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <h3>Who We Are</h3>
-                    <img src="" alt="about" class="nh-img-sq">
-                    <p>Lorem ipsum dolor sit amet, nec persecuti posidonium ut. Clita sanctus qui ex. In pri putent voluptaria, harum nemore vivendum ea quo. Eu nec homero graeco mandamus, ius cu dicit vituperata.
-                    </p>
-                    <div class="nh-btn-container">
-                        <button class="nh-btn-white">Read More</button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <h3>Our Missions</h3>
-                    <img src="" alt="mission" class="nh-img-sq">
-                    <p>Lorem ipsum dolor sit amet, nec persecuti posidonium ut. Clita sanctus qui ex. In pri putent voluptaria, harum nemore vivendum ea quo. Eu nec homero graeco mandamus, ius cu dicit vituperata.
-                    </p>
-                    <div class="nh-btn-container">
-                        <button class="nh-btn-white">Read More</button>
-                    </div>
-                </div>
-            </section>
-
-            <section class="container-fluid nh-media">
-                <div class="row">
-                    <div class="col-xs-12  col-md-offset-1 col-md-2">
-                        <img src="" alt="video">
-                    </div>
-                    <div class="col-xs-12 col-md-2">
-                        <img src="" alt="video">
-                    </div>
-                    <div class="col-xs-12 col-md-2">
-                        <img src="" alt="video">
-                    </div>
-                    <div class="col-xs-12 col-md-2">
-                        <img src="" alt="video">
-                    </div>
-                    <div class="col-xs-12 col-md-2">
-                        <img src="" alt="video">
-                    </div>
-                </div>
-                <div id="home-videos" class="row" style="border: 1px solid red ">
-
-                    <!-- LOADER -->
-                    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>Loading videos...
-                    <span class="sr-only">Loading content...</span>
-
-                </div>
-            </section>
+    <main id="main-content" style="border: 1px solid red ">
+        <div class="nh-content">
+            <!-- LOADER -->
+            <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>Loading videos...
+            <span class="sr-only">Loading content...</span>
         </div>
     </main>
-
-    <section class="nh-callout ">
-        <div class="nh-content ">
-            <h3>We offer the most beautiful and sturdy kites anywhere</h3>
-            <button class="nh-btn-white ">Read More</button>
-        </div>
-        <div class="nh-triangle "></div>
-    </section>
 
 
 
@@ -137,6 +79,7 @@
                 <div class="col-md-4 ">
                     <h3>Recent Posts</h3>
                     <ul id="footer-recent" style="border: 1px solid red">
+                        <!-- LOADER -->
                         <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>Loading posts...
                         <span class="sr-only">Loading content...</span>
                     </ul>
@@ -144,6 +87,7 @@
                 <div class="col-md-4 ">
                     <h3>Archives</h3>
                     <ul id="footer-archive" style="border: 1px solid red">
+                        <!-- LOADER -->
                         <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>Loading posts...
                         <span class="sr-only">Loading content...</span>
                     </ul>

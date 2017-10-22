@@ -13,16 +13,16 @@ body {
 header {
     color: #fff;
     background-image: url(/src/static/images/background-home-top.png);
-    background-size: cover;
+    /* background-size: cover; */
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center -50px;
 }
 
 main {
     background-color: #f4f4f4;
     background-image: url(/src/static/images/squares.png);
     background-repeat: repeat;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 .nh-callout {
@@ -43,7 +43,7 @@ footer {
 /* PAGE WIDTH */
 
 .nh-content {
-    width: 60%;
+    width: 60vw;
     margin: 0 auto;
 }
 
@@ -70,17 +70,24 @@ h3 {
 
 header {
     border-bottom: 1px solid #fff;
-    box-shadow: 0 0 10px #77808d;
+    box-shadow: 0 3px 10px #838383;
     position: relative;
+    z-index: 2;
 }
 
-.nh-callout {
+main {
     box-shadow: 0 5px 10px -5px #000;
     position: relative;
+    z-index: 1;
+}
+
+.fa-spinner {
+    box-shadow: none;
+    color: #979797;
 }
 
 
-/* HEAD NAV ROW */
+/* GRADIENTS */
 
 .nh-head-nav {
     background-color: #fff;
@@ -96,9 +103,40 @@ header {
     padding: 10px;
 }
 
+.nh-btn-blue {
+    color: #fff;
+    padding: 5px 15px;
+    margin: 2px;
+    background-color: #6daab1;
+    background: linear-gradient(#6daab1, #4b7d82);
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 1.5em;
+    /* border: 1px solid #4b7d82; */
+    border-top: 1px solid rgba(155, 198, 204, 0.7);
+    border-right: 1px solid rgba(75, 125, 130, 0.5);
+    border-bottom: 1px solid rgba(75, 125, 130, 0.7);
+    border-left: 1px solid rgba(155, 198, 204, 0.5);
+    /* box-shadow: 0 0 0 1px #6daab1, 0 0 0 2px #4b7d82; */
+    box-shadow: 0 0 0 1px #4b7d82;
+    border-radius: 5px;
+    position: relative;
+    bottom: -22px;
+}
+
+.nh-btn-white {
+    padding: 3px 10px;
+    background: linear-gradient( #fff, #efefef);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color: #7e9294;
+}
+
 .nh-float-right {
     float: right;
 }
+
+
+/* HEAD NAV ROW */
 
 .nh-nav ul {
     list-style: none;
@@ -116,11 +154,12 @@ header {
     padding: 10px 0;
 }
 
-.nh-head-row::after {
+
+/* .nh-head-row::after {
     content: "";
     clear: both;
     display: table;
-}
+} */
 
 
 /* .nh-head-row-item {
@@ -150,13 +189,25 @@ header {
 }
 
 
-/* HEAD CAROUSEL ROW */
+/* HEIGHTS */
 
-.nh-head-care {
+.nh-head-tall {
     min-height: 300px;
+    margin-top: 60px;
     text-align: center;
-    margin-top: 50px;
 }
+
+.nh-head-short {
+    margin-top: 40px;
+    min-height: 100px;
+}
+
+main {
+    min-height: 55vh;
+}
+
+
+/* HEAD CAROUSEL ROW */
 
 .nh-head-care-text {
     width: 100%;
@@ -180,34 +231,6 @@ header {
     text-align: center;
 }
 
-.nh-btn-blue {
-    color: #fff;
-    padding: 5px 15px;
-    margin: 2px;
-    background-color: #6daab1;
-    background: linear-gradient(#6daab1, #4b7d82);
-    font-family: 'Goudy Bookletter 1911', serif;
-    font-size: 1.5em;
-    /* border: 1px solid #4b7d82; */
-    border-top: 1px solid rgba(155, 198, 204, 0.7);
-    border-right: 1px solid rgba(75, 125, 130, 0.5);
-    border-bottom: 1px solid rgba(75, 125, 130, 0.7);
-    border-left: 1px solid rgba(155, 198, 204, 0.5);
-    /* box-shadow: 0 0 0 1px #6daab1, 0 0 0 2px #4b7d82; */
-    box-shadow: 0 0 0 1px #4b7d82;
-    border-radius: 5px;
-    position: relative;
-    top: -22px;
-}
-
-.nh-btn-white {
-    padding: 3px 10px;
-    background: linear-gradient( #fff, #efefef);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    color: #7e9294;
-}
-
 
 /* Makes the read more button align right */
 
@@ -224,12 +247,12 @@ header {
 }
 
 .nh-blurbs p {
-    color: #8c8b8b;
+    color: #979797;
     line-height: 1.7em;
 }
 
 .nh-blurbs h3 {
-    color: #758b8d;
+    color: #979797;
 }
 
 .nh-callout h3 {
@@ -289,7 +312,7 @@ header {
     border-right: 20px solid transparent;
     float: left;
     position: relative;
-    left: 50%;
+    left: 47vw;
 }
 
 

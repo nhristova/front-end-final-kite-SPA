@@ -1,4 +1,10 @@
+/* globals $ */
 import { htmlHelper } from './utils/htmlHelper';
+
+const viewBag = {
+    name: 'About',
+    info: 'Meet our wonderful team',
+};
 
 const aboutController = {
     load() {
@@ -6,7 +12,10 @@ const aboutController = {
 
         htmlHelper
             .getHtml('about')
-            .then((html) => htmlHelper.insert('#main-content', html));
+            .then((html) => {
+                htmlHelper.changeTitle('short', viewBag);
+                htmlHelper.insert('#main-content', html);
+            });
     },
 };
 
