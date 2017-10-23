@@ -1,11 +1,9 @@
 {
-    "name": "nh-test-webly",
+    "name": "front-end-final-kite-SPA",
     "version": "1.0.0",
-    "description": "Test init final project front-end track",
-    "main": "index.js",
-    "scripts": {
-        "test": "nh-test"
-    },
+    "description": "Final project for the Front-end development track of Telerik Academy",
+    "main": "app.js",
+    "scripts": {},
     "author": "Nadezhda Hristova",
     "license": "ISC",
     "dependencies": {
@@ -19,11 +17,18 @@
         "gulp": "^3.9.1",
         "gulp-babel": "^7.0.0",
         "gulp-clean": "^0.3.2",
+        "gulp-clean-css": "^3.9.0",
+        "gulp-concat": "^2.6.1",
         "gulp-sync": "^0.1.4",
+        "gulp-systemjs-builder": "^0.15.0",
         "gulp-webserver": "^0.9.1",
         "handlebars": "^4.0.11",
         "node-sass": "^4.5.3",
         "systemjs": "^0.20.19",
         "systemjs-plugin-babel": "0.0.25"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nhristova/front-end-final-kite-SPA"
     }
 }
