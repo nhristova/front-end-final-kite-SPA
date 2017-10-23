@@ -1,16 +1,30 @@
 import { database } from './database';
 
-const posts = [
-    { title: 'Blabla', content: 'Alabala' },
-    { title: 'Another', content: 'Funny' },
-];
-
-const videos = [
-    { date: 'today', title: 'happy', src: '/src/static/images/kite-flying-flying-disc.jpg' },
-    { date: 'tomorrow', title: 'quick', src: '/src/static/images/kite-flying.jpg' },
-    { date: 'yesterday', title: 'cute', src: '/src/static/images/kite-green.jpg' },
-    { date: 'future', title: 'lovely', src: '/src/static/images/kite-flying-beach.jpg' },
-    { date: 'passed', title: 'amazing', src: '/src/static/images/kite-beautiful-rainbow-bird.jpg' },
+const videos = [{
+        date: 'today',
+        title: 'happy',
+        src: '/src/static/images/kite-flying-flying-disc.jpg',
+    },
+    {
+        date: 'tomorrow',
+        title: 'quick',
+        src: '/src/static/images/kite-flying.jpg',
+    },
+    {
+        date: 'yesterday',
+        title: 'cute',
+        src: '/src/static/images/kite-green.jpg',
+    },
+    {
+        date: 'future',
+        title: 'lovely',
+        src: '/src/static/images/kite-flying-beach.jpg',
+    },
+    {
+        date: 'passed',
+        title: 'amazing',
+        src: '/src/static/images/kite-beautiful-rainbow-bird.jpg',
+    },
 ];
 
 const dataService = {

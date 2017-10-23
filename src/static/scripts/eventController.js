@@ -9,7 +9,7 @@ const viewBag = {
 };
 
 // TODO Rename to events
-const blogController = {
+const eventController = {
     load() {
         htmlHelper.getHtml('inner-page')
             .then((html) => {
@@ -20,7 +20,8 @@ const blogController = {
             .then(() => dataService.getPagedRecentPosts(2, 1))
             .then((data) => {
                 // TODO implement paging with query params
-                return htmlHelper.getHtml('posts-list', { model: { posts: data } });
+                return htmlHelper
+                    .getHtml('posts-list', { model: { posts: data } });
             })
             .then((postsHtml) => htmlHelper.insert('#post-list', postsHtml))
             .then(() => {
@@ -38,7 +39,8 @@ const blogController = {
             .then((post) => {
                 const bag = {
                     name: post.title,
-                    info: `Posted by <em>${post.username}</em> in <em>${post.category}</em> on ${post.date} | 0 Comments`,
+                    info: `Posted by <em>${post.username}</em> in <em>
+                    ${post.category}</em> on ${post.date} | 0 Comments`,
                 };
 
                 htmlHelper.changeTitle('short', bag);
@@ -56,4 +58,4 @@ const blogController = {
     },
 };
 
-export { blogController };
+export { eventController };

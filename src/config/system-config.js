@@ -1,4 +1,5 @@
 /* globals System */
+/*eslint-disable */
 
 System.config({
 

@@ -1,4 +1,3 @@
-/* globals $ */
 import { htmlHelper } from './utils/htmlHelper';
 import { sideController } from './sideController';
 
@@ -17,7 +16,8 @@ const aboutController = {
                 sideController.loadTitles('aside');
             })
             .then(() => htmlHelper.getHtml('about'))
-            .then((aboutHtml) => htmlHelper.insert('#inner-content', aboutHtml));
+            .then((aboutHtml) => htmlHelper
+                .insert('#inner-content', aboutHtml));
     },
 };
 
