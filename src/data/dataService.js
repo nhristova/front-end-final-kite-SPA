@@ -18,7 +18,11 @@ const dataService = {
     getSixRecentPosts() {
         // TODO order by date, slice 5
         return database.getSnapshot('posts')
-            .then((snapshot) => snapshot.val());
+            .then((snapshot) => {
+                const postsData = snapshot.val();
+                console.log(postsData);
+                return postsData;
+            });
     },
 
     add(post) {
@@ -31,7 +35,12 @@ const dataService = {
 
     getById(id) {
         return database.getSnapshot(`posts/${id}`)
-            .then((snapshot) => snapshot.val());
+            .then((snapshot) => {
+                const post = snapshot.val();
+                post.id = snapshot.key;
+
+                return post;
+            });
     },
 };
 

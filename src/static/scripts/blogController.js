@@ -4,8 +4,8 @@ import { dataService } from './../../data/dataService';
 import { sideController } from './sideController';
 
 const viewBag = {
-    name: 'Blog',
-    info: 'Find out about our interesting events',
+    name: 'Events',
+    info: 'Find out about interesting kite events',
 };
 
 // TODO Rename to events
@@ -18,9 +18,12 @@ const blogController = {
                 sideController.loadTitles('aside');
             })
             .then(() => dataService.getSixRecentPosts())
-            .then((data) => htmlHelper
+            .then((data) => {
+                console.log('=== data ===');
+                console.log(data);
                 // TODO implement paging with query params
-                .getHtml('posts-list', { model: { posts: data.slice(0, 2) } }))
+                return htmlHelper.getHtml('posts-list', { model: { posts: data.slice(0, 2) } })
+            })
             .then((postsHtml) => htmlHelper.insert('#post-list', postsHtml))
             .then(() => {
                 this.changeAsideHeight();
@@ -47,7 +50,7 @@ const blogController = {
                 console.log(test);
                 return htmlHelper.getHtml('post', { model: post });
             })
-            .then((postHtml) => htmlHelper.insert('#post-list', postHtml))
+            .then((postHtml) => htmlHelper.insert('#inner-content', postHtml))
             .then(() => this.changeAsideHeight());
     },
 
