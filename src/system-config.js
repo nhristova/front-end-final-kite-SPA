@@ -35,6 +35,7 @@ System.config({
         'jquery': './node_modules/jquery/dist/jquery.min.js',
         'navigo': './node_modules/navigo/lib/navigo.min.js',
         'handlebars': './node_modules/handlebars/dist/handlebars.min.js',
+        // 'firebase': './node_modules/firebase/firebase.js',
         // 'tablesorter': './node_modules/tablesorter/dist/js/jquery.tablesorter.min.js',
         // 'bloodhound': './node_modules/typeahead.js-jspm/dist/bloodhound.min.js',
         // 'typeahead': './node_modules/typeahead.js-jspm/dist/typeahead.jquery.min.js',

@@ -4,7 +4,8 @@ import Handlebars from 'handlebars';
 
 const htmlHelper = {
     getHtml(viewName, model = null) {
-        console.log('--- got to htmlCompile ---');
+        console.log(`--- htmlCompile ${viewName} ---`);
+        // const model = { model: { viewName: data } };
 
         return $.get(`./src/static/views/${viewName}.handlebars`)
             .then((view) => {

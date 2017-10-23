@@ -1,6 +1,6 @@
 /* globals $ */
 
-// TODO: fix errors, check why body is assigned to headers
+// TODO: fix errors, check why body is assigned to headers, remove??
 function sendRequest(method, url, body) {
     const headers = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
 

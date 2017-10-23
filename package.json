@@ -9,6 +9,7 @@
     "author": "Nadezhda Hristova",
     "license": "ISC",
     "dependencies": {
+        "firebase": "^4.6.0",
         "jquery": "^3.2.1",
         "navigo": "^5.3.3"
     },

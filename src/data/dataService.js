@@ -1,3 +1,5 @@
+import { database } from './database';
+
 const posts = [
     { title: 'Blabla', content: 'Alabala' },
     { title: 'Another', content: 'Funny' },
@@ -10,16 +12,25 @@ const videos = [
 
 const dataService = {
     getFiveVideos() {
-        const data = { model: { videos } };
-
-        return Promise.resolve(data);
+        return Promise.resolve(videos);
     },
 
     getSixRecentPosts() {
         // TODO order by date, slice 5
-        const data = { model: { posts } };
+        return database.getSnapshot('posts')
+            .then((snapshot) => snapshot.val());
+    },
 
-        return Promise.resolve(data);
+    add(post) {
+
+    },
+
+    update() {
+
+    },
+
+    getById() {
+
     },
 };
 

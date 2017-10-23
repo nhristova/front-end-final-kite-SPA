@@ -1,6 +1,7 @@
 import Navigo from 'navigo';
 import { homeController } from './scripts/homeController';
 import { aboutController } from './scripts/aboutController';
+import { blogController } from './scripts/blogController';
 
 const router = new Navigo(null, true, '#');
 
@@ -10,10 +11,11 @@ const initRoutes = () => {
     router
         .on(() => homeController.load())
         .on('home', () => homeController.load())
+        .on('blog', () => blogController.load())
         .on('about', () => aboutController.load())
         .resolve();
     // router
-    //     .notFound(() => notFoundController.init())
+    //     .notFound(() => notFoundController.load())
     //     .resolve();
 };
 
