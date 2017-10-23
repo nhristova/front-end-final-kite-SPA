@@ -26,8 +26,8 @@ const database = {
 
     getSnapshot(path = '') {
         console.log(`--- getSnapshot ${path} ---`);
-
-        return firebase.database().ref('/posts/').once('value');
+        // TODO change path
+        return firebase.database().ref(`/${path}`).once('value');
     },
 
     updateChild(path = '', data) {

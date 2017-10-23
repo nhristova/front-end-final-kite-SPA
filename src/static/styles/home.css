@@ -267,8 +267,10 @@ main {
     line-height: 1.7em;
 }
 
-.nh-blurbs h3 {
-    color: #979797;
+.nh-blurbs h3,
+#post-list h2,
+#aside-content h3 {
+    color: #4b7d82;
 }
 
 .nh-callout h3 {
@@ -293,6 +295,11 @@ main {
 .nh-img-lg {
     width: 140px;
     height: 140px;
+}
+
+.nh-img-xl {
+    width: 200px;
+    height: 200px;
 }
 
 .nh-media {
@@ -366,5 +373,3 @@ footer li {
     border-left: 1px solid #fff;
     box-shadow: -1px 0 0 0 #979797, -10px 0 10px -10px #838383;
 }
-
-.nh-post {}

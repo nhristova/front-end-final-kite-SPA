@@ -12,6 +12,7 @@ const initRoutes = () => {
         .on(() => homeController.load())
         .on('home', () => homeController.load())
         .on('blog', () => blogController.load())
+        .on('blog/:postId', (param) => blogController.loadPost(param.postId))
         .on('about', () => aboutController.load())
         .resolve();
     // router

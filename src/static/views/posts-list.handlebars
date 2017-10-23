@@ -1,0 +1,16 @@
+{{#each model.posts as |post|}}
+<article class="nh-post nh-shadow-light">
+    <h2>{{post.title}}</h2>
+    <p class="nh-slogan">Posted by
+        <em>{{post.username}}</em> in
+        <em>{{post.category}}</em> on {{post.date}} | 0 Comments</p>
+    <div class="nh-clearfix">
+        <img src="{{post.imgurl}}" alt="post" class="nh-img-sq nh-img-lg">
+        <p>{{post.short}}
+        </p>
+    </div>
+    <div class="nh-btn-container">
+        <button class="nh-btn-white btn-default nh-shadow-light">Read More</button>
+    </div>
+</article>
+{{/each}}

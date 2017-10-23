@@ -1,6 +1,7 @@
 /* globals $ */
 import { htmlHelper } from './utils/htmlHelper';
 import { dataService } from './../../data/dataService';
+import { sideController } from './sideController';
 
 const viewBag = {
     name: 'Flying Kites Has Never Been Easier',
@@ -10,18 +11,7 @@ const viewBag = {
 const homeController = {
 
     init() {
-        console.log('--- homeController.init() ---');
-
-        dataService.getSixRecentPosts()
-            .then((data) => htmlHelper
-                .getHtml('footer-recent', { model: { posts: data } }))
-            .then((html) => htmlHelper.insert('#footer-recent', html));
-
-        // TODO change to load archive posts
-        return dataService.getSixRecentPosts()
-            .then((data) => htmlHelper
-                .getHtml('footer-recent', { model: { posts: data } }))
-            .then((html) => htmlHelper.insert('#footer-archive', html));
+        return sideController.loadTitles('footer');
     },
 
     load() {

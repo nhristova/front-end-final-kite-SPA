@@ -29,8 +29,9 @@ const dataService = {
 
     },
 
-    getById() {
-
+    getById(id) {
+        return database.getSnapshot(`posts/${id}`)
+            .then((snapshot) => snapshot.val());
     },
 };
 
