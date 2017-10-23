@@ -1,10 +1,8 @@
 /* globals $ */
 import { initRoutes } from './router';
-import { homeController } from './scripts/homeController';
+import { sideController } from './scripts/sideController';
 
 $(() => {
-    console.log('--- starting initRoutes ---');
-
-    homeController.init()
+    sideController.loadTitles('footer')
         .then(() => initRoutes());
 });

@@ -60,9 +60,15 @@ h3 {
 .nh-blurbs p,
 .nh-footer-cols p,
 .nh-footer-cols li,
-.nh-post p {
+.nh-post p,
+{
     font-family: 'Droid Sans', sans-serif;
     font-size: 0.85em;
+}
+
+a {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 0.95em;
 }
 
 
@@ -227,7 +233,7 @@ main {
 }
 
 main {
-    min-height: 55vh;
+    min-height: 35vh;
 }
 
 
@@ -280,11 +286,16 @@ main {
     display: inline-block;
 }
 
+.nh-img-fit {
+    object-fit: cover;
+}
+
 .nh-img-sq {
     float: left;
     background-color: #fff;
     margin: 5px 10px 2px 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
 
 .nh-img-md {
@@ -351,6 +362,8 @@ main {
 
 .nh-footer-cols p,
 .nh-footer-cols li,
+.nh-footer-cols a,
+footer a,
 footer li {
     color: #aebdd1;
 }

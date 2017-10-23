@@ -15,6 +15,7 @@ const initRoutes = () => {
         .on('blog/:postId', (param) => blogController.loadPost(param.postId))
         .on('about', () => aboutController.load())
         .resolve();
+    // TODO implement
     // router
     //     .notFound(() => notFoundController.load())
     //     .resolve();

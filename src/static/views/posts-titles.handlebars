@@ -1,3 +1,5 @@
 {{#each model.posts as |post|}}
-<li>{{post.title}}</li>
+<li>
+    <a href="#blog/{{@key}}">{{post.title}}</a>
+</li>
 {{/each}}

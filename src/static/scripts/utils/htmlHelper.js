@@ -4,9 +4,6 @@ import Handlebars from 'handlebars';
 
 const htmlHelper = {
     getHtml(viewName, model = null) {
-        console.log(`--- htmlCompile ${viewName} ---`);
-        // const model = { model: { viewName: data } };
-
         return $.get(`./src/static/views/${viewName}.handlebars`)
             .then((view) => {
                 const templateFunc = Handlebars.compile(view);
@@ -16,8 +13,6 @@ const htmlHelper = {
     },
 
     changeTitle(height, viewBag) {
-        console.log(`--- changeTitle to ${height} ---`);
-
         let classToRemove;
         let classToAdd;
 
@@ -40,8 +35,6 @@ const htmlHelper = {
     },
 
     insert(id, html) {
-        console.log(`--- insertHtml in ${id} ---`);
-
         $(id).html(html);
     },
 };

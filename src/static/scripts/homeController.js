@@ -10,10 +10,6 @@ const viewBag = {
 
 const homeController = {
 
-    init() {
-        return sideController.loadTitles('footer');
-    },
-
     load() {
         htmlHelper.getHtml('home')
             .then((html) => {

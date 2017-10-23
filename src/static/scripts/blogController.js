@@ -17,12 +17,10 @@ const blogController = {
                 htmlHelper.insert('#main-content', html);
                 sideController.loadTitles('aside');
             })
-            .then(() => dataService.getSixRecentPosts())
+            .then(() => dataService.getPagedRecentPosts(2, 1))
             .then((data) => {
-                console.log('=== data ===');
-                console.log(data);
                 // TODO implement paging with query params
-                return htmlHelper.getHtml('posts-list', { model: { posts: data.slice(0, 2) } })
+                return htmlHelper.getHtml('posts-list', { model: { posts: data } });
             })
             .then((postsHtml) => htmlHelper.insert('#post-list', postsHtml))
             .then(() => {
@@ -31,8 +29,6 @@ const blogController = {
     },
 
     loadPost(id) {
-        console.log(`--- what is this ${id} ----`);
-
         htmlHelper.getHtml('inner-page')
             .then((html) => {
                 htmlHelper.insert('#main-content', html);
@@ -46,8 +42,6 @@ const blogController = {
                 };
 
                 htmlHelper.changeTitle('short', bag);
-                const test = { model: post };
-                console.log(test);
                 return htmlHelper.getHtml('post', { model: post });
             })
             .then((postHtml) => htmlHelper.insert('#inner-content', postHtml))
